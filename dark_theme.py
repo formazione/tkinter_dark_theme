@@ -2,8 +2,10 @@ import tkinter as tk
 import tkinter.ttk as ttk
 
 
+
 def darkstyle():
-    ''' Return a dark style '''
+    ''' Return a dark style to the window'''
+    
     style = ttk.Style(root)
     root.tk.call('source', 'azure dark/azure dark.tcl')
     style.theme_use('azure')
