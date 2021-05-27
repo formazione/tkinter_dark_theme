@@ -3,7 +3,7 @@ import tkinter.ttk as ttk
 
 
 
-def darkstyle():
+def darkstyle(root):
     ''' Return a dark style to the window'''
     
     style = ttk.Style(root)
@@ -13,31 +13,34 @@ def darkstyle():
     style.configure("Togglebutton", foreground='white')
     return style
 
+def main_window():
+    """ The window with the darkstyle """
+    root = tk.Tk()
+    root.title("My App")
+    root.resizable(False, False)
+    img = tk.PhotoImage(file="001.png")
 
-root = tk.Tk()
-root.title("My App")
-root.resizable(False, False)
-img = tk.PhotoImage(file="001.png")
-
-style = darkstyle()
-
-
-lab = ttk.Label(
-    root,
-    text="Hello World",
-    compound="center",
-    font="arial 50",
-    image=img)
-lab.pack(fill="both", expand=1)
+    style = darkstyle(root)
 
 
-button = ttk.Button(
-    root,
-    text="Click me",
-    style="Accentbutton"
-    )
+    lab = ttk.Label(
+        root,
+        text="Hello World",
+        compound="center",
+        font="arial 50",
+        image=img)
+    lab.pack(fill="both", expand=1)
 
-button.place(relx=0.43, rely=0.7, width=100, height=30)
+
+    button = ttk.Button(
+        root,
+        text="Click me",
+        style="Accentbutton"
+        )
+
+    button.place(relx=0.43, rely=0.7, width=100, height=30)
 
 
-root.mainloop()
+    root.mainloop()
+
+main_window()
