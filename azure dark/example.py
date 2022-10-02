@@ -5,6 +5,16 @@ import tkinter as tk
 from tkinter import ttk
 
 root = tk.Tk()
+
+
+#---------------
+#load azure dark
+#---------------
+root.tk.call('source', os.path.join(os.path.dirname(__file__), 'azure dark.tcl'))
+ttk.Style(root).theme_use('azure')
+#---------------
+
+
 root.title('Azure')
 
 window_height = 530
@@ -18,8 +28,6 @@ y_cordinate = int((screen_height/2) - (window_height/2))
 
 root.geometry("{}x{}+{}+{}".format(window_width, window_height, x_cordinate, y_cordinate))
 
-root.tk.call('source', os.path.join(os.path.dirname(__file__), 'azure dark.tcl'))
-ttk.Style(root).theme_use('azure')
 
 options = ['', 'OptionMenu', 'Value 1', 'Value 2']
 a = tk.BooleanVar()
@@ -37,11 +45,11 @@ frame1.place(x=20, y=12)
 frame2 = ttk.LabelFrame(root, text='Radiobuttons', width=210, height=160)
 frame2.place(x=20, y=252)
 
-check1 = ttk.Checkbutton(frame1, text='Unchecked', variable=a, offvalue=0, onvalue=1)
+check1 = ttk.Checkbutton(frame1, text='Unchecked', variable=a)
 check1.place(x=20, y=20)
-check2 = ttk.Checkbutton(frame1, text='Checked', variable=b, offvalue=0, onvalue=1)
+check2 = ttk.Checkbutton(frame1, text='Checked', variable=b)
 check2.place(x=20, y=60)
-check3 = ttk.Checkbutton(frame1, text='Third state', variable=c, offvalue=0, onvalue=1)
+check3 = ttk.Checkbutton(frame1, text='Third state', variable=c)
 check3.state(['alternate'])
 check3.place(x=20, y=100)
 check4 = ttk.Checkbutton(frame1, text='Disabled', state='disabled')
@@ -92,7 +100,7 @@ button.place(x=250, y=320)
 accentbutton = ttk.Button(root, text='Accent button', style='Accentbutton', command=callback)
 accentbutton.place(x=250, y=370)
 
-toggle = ttk.Checkbutton(root, text='Toggle button', style='Togglebutton', variable=f, offvalue=0, onvalue=1)
+toggle = ttk.Checkbutton(root, text='Toggle button', style='Togglebutton', variable=f)
 toggle.place(x=250, y=420)
 
 scale = ttk.Scale(root, to=100, variable=g)
@@ -105,7 +113,7 @@ g.set(g.get()) # init g2
 progress = ttk.Progressbar(root, variable=g2, mode='determinate')
 progress.place(x=80, y=480)
 
-switch = ttk.Checkbutton(root, text='Toggle switch', style='Switch', variable=h, offvalue=0, onvalue=1)
+switch = ttk.Checkbutton(root, text='Toggle switch', style='Switch', variable=h)
 switch.place(x=250, y=470)
 
 sep1 = ttk.Separator()

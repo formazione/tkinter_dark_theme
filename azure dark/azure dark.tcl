@@ -244,7 +244,7 @@ namespace eval ttk::theme::azure {
                 {pressed selected} $I(checkbox-checked-active) \
                 {active selected} $I(checkbox-checked-hover) \
                 selected $I(checkbox-checked) \
-                {pressed !selected} $I(checkbox-unchecked-active) \
+                {pressed !selected} $I(checkbox-unchecked-hover) \
                 active $I(checkbox-unchecked-hover) \
             ] -width 26 -sticky w
 
@@ -265,12 +265,14 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Togglebutton.button image \
             [list $I(button-basic) \
-                {selected disabled} $I(button-basic) \
-                disabled $I(button-hover) \
+                {selected disabled} $I(button-disabled) \
+                disabled $I(button-basic) \
+                {selected hover} $I(button-accent-hover) \
+                hover $I(button-hover) \
                 {pressed selected} $I(button-basic) \
+                pressed $I(button-accent) \
                 {active selected} $I(button-accent) \
                 selected $I(button-accent) \
-                {pressed !selected} $I(button-accent) \
                 active $I(button-basic) \
             ] -border 4 -sticky ewns
 
@@ -279,7 +281,7 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Radiobutton.indicator image \
             [list $I(radio-unselected) \
-                pressed $I(scale-slider-pressed) \
+                pressed $I(scale-slider-hover) \
                 {selected disabled} $I(radio-selected-disabled) \
                 disabled $I(radio-unselected-disabled) \
                 {pressed selected} $I(radio-selected-active) \
@@ -295,7 +297,7 @@ namespace eval ttk::theme::azure {
         ttk::style element create Horizontal.Scrollbar.thumb \
              image [list $I(scrollbar-slider-horizontal) \
                 disabled $I(scrollbar-trough-horizontal) \
-                pressed $I(scrollbar-slider-horizontal) \
+                pressed $I(scrollbar-slider-horizontal-hover) \
                 active $I(scrollbar-slider-horizontal-hover) \
             ] -sticky ew
 
@@ -305,7 +307,7 @@ namespace eval ttk::theme::azure {
         ttk::style element create Vertical.Scrollbar.thumb \
             image [list $I(scrollbar-slider-vertical) \
                 disabled  $I(scrollbar-trough-vertical) \
-                pressed $I(scrollbar-slider-vertical) \
+                pressed $I(scrollbar-slider-vertical-hover) \
                 active $I(scrollbar-slider-vertical-hover) \
             ] -sticky ns
 
@@ -317,7 +319,7 @@ namespace eval ttk::theme::azure {
         ttk::style element create Horizontal.Scale.slider \
             image [list $I(scale-slider) \
                 disabled $I(scale-slider-disabled) \
-                pressed $I(scale-slider-pressed) \
+                pressed $I(scale-slider-hover) \
                 active $I(scale-slider-hover) \
             ] -sticky {}
 
@@ -328,7 +330,7 @@ namespace eval ttk::theme::azure {
         ttk::style element create Vertical.Scale.slider \
             image [list $I(scale-slider) \
                 disabled $I(scale-slider-disabled) \
-                pressed $I(scale-slider-pressed) \
+                pressed $I(scale-slider-hover) \
                 active $I(scale-slider-hover) \
             ] -sticky {}
 
