@@ -96,13 +96,14 @@ accentbutton.place(x=250, y=370)
 toggle = ttk.Checkbutton(root, text='Toggle button', style='Togglebutton', variable=f, offvalue=0, onvalue=1)
 toggle.place(x=250, y=420)
 
-def scale(i):
-    g.set(int(scale.get()))
-
-scale = ttk.Scale(root, from_=100, to=0, variable=g, command=scale)
+scale = ttk.Scale(root, to=100, variable=g)
 scale.place(x=80, y=430)
 
-progress = ttk.Progressbar(root, value=0, variable=g, mode='determinate')
+g2 = tk.IntVar()
+g.trace_add([ 'write', 'unset', ], lambda *args: g2.set(100 - g.get()))
+g.set(g.get()) # init g2
+
+progress = ttk.Progressbar(root, variable=g2, mode='determinate')
 progress.place(x=80, y=480)
 
 switch = ttk.Checkbutton(root, text='Toggle switch', style='Switch', variable=h, offvalue=0, onvalue=1)
@@ -119,6 +120,9 @@ notebook.add(notebookTab2, text='Tab 2')
 notebookTab3 = ttk.Frame(notebook, width=335, height=150)
 notebook.add(notebookTab3, text='Tab 3')
 notebook.place(x=420, y=330)
+
+ttk.Scale(notebookTab1, from_=100, to=0, variable=g, orient=tk.VERTICAL).pack(side=tk.LEFT)
+ttk.Progressbar(notebookTab1, variable=g, mode='determinate', orient=tk.VERTICAL).pack(side=tk.LEFT)
 
 treeFrame = ttk.Frame(root)
 treeFrame.place(x=420, y=20)
