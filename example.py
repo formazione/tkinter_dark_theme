@@ -1,19 +1,11 @@
 
-import os
+import azure_dark
 
 import tkinter as tk
 from tkinter import ttk
 
 root = tk.Tk()
-
-
-#---------------
-#load azure dark
-#---------------
-root.tk.call('source', os.path.join(os.path.dirname(__file__), 'azure dark.tcl'))
-ttk.Style(root).theme_use('azure')
-#---------------
-
+azure_dark.apply_theme(root)
 
 root.title('Azure')
 
@@ -42,9 +34,6 @@ h = tk.BooleanVar(value=1)
 frame1 = ttk.LabelFrame(root, text='Checkbuttons', width=210, height=200)
 frame1.place(x=20, y=12)
 
-frame2 = ttk.LabelFrame(root, text='Radiobuttons', width=210, height=160)
-frame2.place(x=20, y=252)
-
 check1 = ttk.Checkbutton(frame1, text='Unchecked', variable=a)
 check1.place(x=20, y=20)
 check2 = ttk.Checkbutton(frame1, text='Checked', variable=b)
@@ -54,6 +43,9 @@ check3.state(['alternate'])
 check3.place(x=20, y=100)
 check4 = ttk.Checkbutton(frame1, text='Disabled', state='disabled')
 check4.place(x=20, y=140)
+
+frame2 = ttk.LabelFrame(root, text='Radiobuttons', width=210, height=160)
+frame2.place(x=20, y=252)
 
 radio1 = ttk.Radiobutton(frame2, text='Deselected', variable=d, value=1)
 radio1.place(x=20, y=20)
@@ -91,8 +83,7 @@ menubtn.place(x=250, y=220)
 menubtn = ttk.OptionMenu(root, e, *options)
 menubtn.place(x=250, y=270)
 
-def callback():
-    print('Button callback')
+def callback(): print('Button callback')
 
 button = ttk.Button(root, text='Button', command=callback)
 button.place(x=250, y=320)
@@ -189,3 +180,4 @@ root.rowconfigure(0, weight=1)
 ttk.Sizegrip(root).grid(sticky=tk.SE)
 
 root.mainloop()
+

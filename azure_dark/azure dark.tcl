@@ -199,9 +199,8 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Button.button image \
             [list $I(button-basic) \
-                {disabled pressed} $I(button-disabled) \
-                {focus active} $I(button-accent-hover) \
                 disabled $I(button-disabled) \
+                {focus active} $I(button-accent-hover) \
                 pressed $I(button-basic) \
                 active $I(button-hover) \
                 focus $I(button-accent) \
@@ -225,8 +224,8 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Accentbutton.button image \
             [list $I(button-accent) \
-                {disabled pressed} $I(button-disabled) \
                 disabled $I(button-disabled) \
+                {pressed !active} $I(button-accent-hover) \
                 pressed $I(button-accent) \
                 active $I(button-accent-hover) \
             ] -border 4 -sticky ewns

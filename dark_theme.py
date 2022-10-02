@@ -1,20 +1,16 @@
 
 import tkinter as tk
 import tkinter.ttk as ttk
-
-def loadAzureStyle(root):
-    import os
-    root.tk.call('source', os.path.join(os.path.dirname(__file__), 'azure dark', 'azure dark.tcl'))
-    return 'azure'
+import azure_dark
 
 def main_window():
     """ The window with the darkstyle """
     root = tk.Tk()
+    azure_dark.apply_theme(root)
+
     root.title("My App")
     root.resizable(False, False)
     img = tk.PhotoImage(file="001.png")
-
-    ttk.Style(root).theme_use(loadAzureStyle(root))
 
     lab = ttk.Label(
         root,
