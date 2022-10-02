@@ -301,11 +301,11 @@
         <path
            d="m -1735.0105,-944.00965 h -200.0003 c -55.2,0 -99.9998,44.79999 -99.9998,99.99999 0,55.2 44.7998,100.00001 99.9998,100.00001 h 200.0003 c 55.2,0 99.9998,-44.80001 99.9998,-100.00001 0,-55.2 -44.7998,-99.99999 -99.9998,-99.99999 z m 0,160.00001 c -33.2002,0 -60.0002,-26.79999 -60.0002,-60 0,-33.20001 26.8,-60 60.0002,-60 33.1998,0 60,26.79999 60,60 0,33.20001 -26.8002,60 -60,60 z"
            id="path2058"
-           style="fill:#cccccc;fill-opacity:1;stroke-width:20" />
+           style="fill:#007fff;fill-opacity:1;stroke-width:20" />
         <path
            d="m -1735.0104,-1144.0097 h -200.0003 c -55.2,0 -99.9998,44.8 -99.9998,100 0,55.20005 44.7998,100.00005 99.9998,100.00005 h 200.0003 c 55.2,0 99.9997,-44.8 99.9997,-100.00005 0,-55.2 -44.7997,-100 -99.9997,-100 z m 0,160.00005 c -33.2002,0 -60.0002,-26.79995 -60.0002,-60.00005 0,-33.2 26.8,-60 60.0002,-60 33.1998,0 60,26.8 60,60 0,33.2001 -26.8002,60.00005 -60,60.00005 z"
            id="path2060"
-           style="fill:#007fff;fill-opacity:1;stroke-width:20" />
+           style="fill:#3398ff;fill-opacity:1;stroke-width:20" />
         <path
            d="m -1735.0105,-744.00965 h -200.0003 c -55.2,0 -99.9998,44.8 -99.9998,100 0,55.2 44.7998,100 99.9998,100 h 200.0003 c 55.1999,0 99.9997,-44.8 99.9997,-100 0,-55.2 -44.7998,-100 -99.9997,-100 z m 0,160 c -33.2002,0 -60.0002,-26.79999 -60.0002,-60 0,-33.20001 26.8,-60 60.0002,-60 33.1998,0 59.9999,26.79999 59.9999,60 0,33.20001 -26.8001,60 -59.9999,60 z"
            id="path2062"
@@ -330,7 +330,7 @@
         <g
            id="g1574">
           <rect
-             style="fill:#007fff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:396.85;stroke-opacity:0"
+             style="fill:#3398ff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:396.85;stroke-opacity:0"
              id="rect2233"
              width="200"
              height="200"
@@ -376,7 +376,7 @@
         <g
            id="g1578">
           <rect
-             style="fill:#007fff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:396.85;stroke-opacity:0"
+             style="fill:#3398ff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:396.85;stroke-opacity:0"
              id="rect1149"
              width="200"
              height="200"
@@ -517,7 +517,7 @@
         <g
            id="g1550">
           <rect
-             style="fill:#737373;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:396.85;stroke-opacity:0"
+             style="fill:#007fff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:396.85;stroke-opacity:0"
              id="rect1525"
              width="200"
              height="200"
@@ -536,7 +536,7 @@
         <g
            id="g1556">
           <rect
-             style="fill:#737373;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:396.85;stroke-opacity:0"
+             style="fill:#007fff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:396.85;stroke-opacity:0"
              id="rect1531"
              width="200"
              height="200"
@@ -1286,7 +1286,7 @@
       <g
          id="g1242">
         <circle
-           style="fill:#007fff;fill-opacity:1;stroke-width:20.0429;stroke-linecap:square;stroke-dashoffset:396.85"
+           style="fill:#3398ff;fill-opacity:1;stroke-width:20.0429;stroke-linecap:square;stroke-dashoffset:396.85"
            id="circle1543"
            cx="-32.415844"
            cy="-1024.8514"
@@ -1298,7 +1298,7 @@
            cy="-624.8515"
            r="100" />
         <circle
-           style="fill:#737373;fill-opacity:1;stroke-width:20.0429;stroke-linecap:square;stroke-dashoffset:396.85"
+           style="fill:#007fff;fill-opacity:1;stroke-width:20.0429;stroke-linecap:square;stroke-dashoffset:396.85"
            id="circle1547"
            cx="-32.415844"
            cy="-824.8515"
@@ -1478,7 +1478,7 @@
         <g
            id="g1484">
           <circle
-             style="opacity:0.997;fill:#007fff;fill-opacity:1;stroke-width:20.7324;stroke-linecap:square;stroke-linejoin:round"
+             style="opacity:0.997;fill:#3398ff;fill-opacity:1;stroke-width:20.7324;stroke-linecap:square;stroke-linejoin:round"
              id="path14519"
              cx="-1204.1077"
              cy="-1039.3326"
@@ -1490,7 +1490,7 @@
              cy="-1039.3326"
              r="75" />
           <circle
-             style="fill:#007fff;fill-opacity:1;stroke:#ffff00;stroke-width:0;stroke-linecap:square;stroke-linejoin:round"
+             style="fill:#3398ff;fill-opacity:1;stroke:#ffff00;stroke-width:0;stroke-linecap:square;stroke-linejoin:round"
              id="path46"
              cx="-1204.1077"
              cy="-1039.3326"
@@ -1556,7 +1556,7 @@
         <g
            id="g1498">
           <circle
-             style="opacity:0.997;fill:#737373;fill-opacity:1;stroke-width:20.7324;stroke-linecap:square;stroke-linejoin:round"
+             style="opacity:0.997;fill:#007fff;fill-opacity:1;stroke-width:20.7324;stroke-linecap:square;stroke-linejoin:round"
              id="circle1609"
              cx="-1206.4281"
              cy="-839.33264"
@@ -1568,7 +1568,7 @@
              cy="-839.3327"
              r="75" />
           <circle
-             style="fill:#737373;fill-opacity:1;stroke:#ffff00;stroke-width:0;stroke-linecap:square;stroke-linejoin:round"
+             style="fill:#007fff;fill-opacity:1;stroke:#ffff00;stroke-width:0;stroke-linecap:square;stroke-linejoin:round"
              id="circle1613"
              cx="-1206.4281"
              cy="-839.3327"
