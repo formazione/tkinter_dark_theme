@@ -51,7 +51,7 @@ namespace eval ttk::theme::azure {
             Button.button -children {
                 Button.padding -children {
                     Button.label -side left -expand true
-                } 
+                }
             }
         }
 
@@ -59,7 +59,7 @@ namespace eval ttk::theme::azure {
             Toolbutton.button -children {
                 Toolbutton.padding -children {
                     Toolbutton.label -side left -expand true
-                } 
+                }
             }
         }
 
@@ -67,7 +67,7 @@ namespace eval ttk::theme::azure {
             Accentbutton.button -children {
                 Accentbutton.padding -children {
                     Accentbutton.label -side left -expand true
-                } 
+                }
             }
         }
 
@@ -94,7 +94,7 @@ namespace eval ttk::theme::azure {
             Togglebutton.button -children {
                 Togglebutton.padding -children {
                     Togglebutton.label -side left -expand true
-                } 
+                }
             }
         }
 
@@ -364,7 +364,7 @@ namespace eval ttk::theme::azure {
                 disabled $I(button-disabled) \
                 pressed  $I(button-basic) \
                 active   $I(button-hover) \
-            ] -border 4 -sticky news 
+            ] -border 4 -sticky news
 
         ttk::style element create Menubutton.indicator \
             image [list $I(arrow-down) \
@@ -382,8 +382,8 @@ namespace eval ttk::theme::azure {
                 disabled $I(button-disabled) \
                 pressed $I(button-basic) \
                 active $I(button-hover) \
-                
-            ] -border 5 -sticky news 
+
+            ] -border 5 -sticky news
 
         ttk::style element create OptionMenu.indicator \
             image [list $I(arrow-down) \
@@ -398,7 +398,7 @@ namespace eval ttk::theme::azure {
             {readonly hover} $colors(-selectbg) \
             {readonly focus} $colors(-selectbg) \
         ]
-            
+
         ttk::style map TCombobox -selectforeground [list \
             {!focus} $colors(-selectfg) \
             {readonly hover} $colors(-selectfg) \
@@ -447,7 +447,7 @@ namespace eval ttk::theme::azure {
                 pressed $I(arrow-down-active) \
                 disabled $I(arrow-down) \
           ] -border 4 -width 15 -sticky e
-        
+
         # Notebook
         ttk::style element create Notebook.client \
             image $I(notebook-client) -border 4
@@ -479,7 +479,7 @@ namespace eval ttk::theme::azure {
             image [list $I(tree-basic) \
                 active $I(tree-hover)
             ] -border 5 -padding 4 -sticky ewns
-        
+
         ttk::style element create Treeitem.indicator \
             image [list $I(arrow-right) \
                 user2 $I(empty) \
@@ -493,11 +493,11 @@ namespace eval ttk::theme::azure {
             -foreground [list selected $colors(-selectfg)]
 
         # Sashes
-        
+
         ttk::style configure TPanedwindow -width 1 -padding 0
         ttk::style map TPanedwindow -background \
             [list hover $colors(-bg)]
-        
+
         # Set colors for other widgets
         tk_setPalette background [ttk::style lookup . -background] \
             foreground [ttk::style lookup . -foreground] \
