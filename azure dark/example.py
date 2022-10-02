@@ -113,9 +113,6 @@ switch = ttk.Checkbutton(root, text='Toggle switch', style='Switch', variable=h,
 switch.place(x=250, y=470)
 switch.invoke()
 
-size = ttk.Sizegrip(root)
-size.place(x=780, y=510)
-
 sep1 = ttk.Separator()
 sep1.place(x=20, y=235, width=210)
 
@@ -179,5 +176,10 @@ treeview.insert(parent=21, index='end', iid=22, text="Child", values=("Subitem 4
 treeview.insert(parent=21, index='end', iid=23, text="Child", values=("Subitem 4.2.2", "Value 4.2.2"))
 treeview.insert(parent=21, index='end', iid=24, text="Child", values=("Subitem 4.2.3", "Value 4.2.3"))
 treeview.insert(parent=19, index='end', iid=25, text="Child", values=("Subitem 4.3", "Value 4.3"))
+
+#last widget is over others
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
+ttk.Sizegrip(root).grid(sticky=tk.SE)
 
 root.mainloop()
