@@ -279,12 +279,12 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Radiobutton.indicator image \
             [list $I(radio-unselected) \
+                pressed $I(scale-slider-pressed) \
                 {selected disabled} $I(radio-selected-disabled) \
                 disabled $I(radio-unselected-disabled) \
                 {pressed selected} $I(radio-selected-active) \
                 {active selected} $I(radio-selected-hover) \
                 selected $I(radio-selected) \
-                {pressed !selected} $I(scale-slider-pressed) \
                 active $I(radio-unselected-hover) \
             ] -width 26 -sticky w
 
