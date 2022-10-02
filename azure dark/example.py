@@ -1,3 +1,6 @@
+
+import os
+
 import tkinter as tk
 from tkinter import ttk
 
@@ -16,7 +19,7 @@ y_cordinate = int((screen_height/2) - (window_height/2))
 root.geometry("{}x{}+{}+{}".format(window_width, window_height, x_cordinate, y_cordinate))
 
 style = ttk.Style(root)
-root.tk.call('source', 'azure.tcl')
+root.tk.call('source', os.path.join(os.path.dirname(__file__), 'azure dark.tcl'))
 style.theme_use('azure')
 
 options = ['', 'OptionMenu', 'Value 1', 'Value 2']
