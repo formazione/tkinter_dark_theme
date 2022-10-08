@@ -1,9 +1,7 @@
 
 # coding: utf-8
 
-'''
-this modile provide a function that switch tk style to 'azure dark'
-'''
+'''this modile provide a function that switch tk style to "azure dark"'''
 
 import os
 import tkinter.ttk

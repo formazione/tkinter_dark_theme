@@ -1,4 +1,6 @@
 
+# coding: utf-8
+
 import azure_dark
 
 import tkinter as tk
@@ -119,6 +121,7 @@ notebookTab3 = ttk.Frame(notebook, width=335, height=150)
 notebook.add(notebookTab3, text='Tab 3')
 notebook.place(x=420, y=330)
 
+#inside tab1
 ttk.Scale(notebookTab1, from_=100, to=0, variable=g, orient=tk.VERTICAL).pack(side=tk.LEFT)
 ttk.Progressbar(notebookTab1, variable=g, mode='determinate', orient=tk.VERTICAL).pack(side=tk.LEFT)
 
