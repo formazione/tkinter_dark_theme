@@ -186,8 +186,8 @@ namespace eval ttk::theme::azure {
             Treeitem.padding -sticky nswe -children {
                 Treeitem.indicator -side left -sticky {} Treeitem.image -side left -sticky {} -children {
                     Treeitem.text -side left -sticky {}
-                    }
                 }
+            }
         }
 
 
@@ -460,17 +460,11 @@ namespace eval ttk::theme::azure {
             ] -border 5 -padding {12 4}
 
         # Progressbar
-        ttk::style element create Horizontal.Progressbar.trough \
-            image $I(scrollbar-trough-horizontal) -border {} -sticky ew
+        ttk::style element create Horizontal.Progressbar.trough image $I(scrollbar-trough-horizontal) -border {} -sticky ew
+        ttk::style element create Horizontal.Progressbar.pbar   image $I(scrollbar-slider-horizontal) -border {} -sticky ew
 
-        ttk::style element create Horizontal.Progressbar.pbar \
-            image $I(scrollbar-slider-horizontal) -border {} -sticky ew
-
-        ttk::style element create Vertical.Progressbar.trough \
-            image $I(scrollbar-trough-vertical) -border {} -sticky ns
-
-        ttk::style element create Vertical.Progressbar.pbar \
-            image $I(scrollbar-slider-vertical) -border {} -sticky ns
+        ttk::style element create Vertical.Progressbar.trough image $I(scrollbar-trough-vertical) -border {} -sticky ns
+        ttk::style element create Vertical.Progressbar.pbar   image $I(scrollbar-slider-vertical) -border {} -sticky ns
 
         # Treeview
         ttk::style element create Treeview.field \
@@ -510,3 +504,4 @@ namespace eval ttk::theme::azure {
         option add *font [ttk::style lookup . -font]
     }
 }
+
