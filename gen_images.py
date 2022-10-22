@@ -2,7 +2,7 @@
 # coding: utf-8
 
 '''
-this script generate png image using inkscape like call
+png image generator using inkscape like call
 
 steps are :
 - get used image name in styleTclScript.
@@ -19,16 +19,9 @@ module members are :
 import os
 import re
 
-'''inkscape like command'''
 inkscapeCmd = 'inkscape'
-
-'''style implemantation script'''
 styleTclScript = os.path.join(os.path.dirname(__file__), 'azure_dark', 'azure dark.tcl')
-
-'''svg file contaning all image elements with id equals to used image names'''
 svgAmalgameFile = os.path.join(os.path.dirname(__file__), 'azure_dark', 'assets', 'azure.svg')
-
-'''outpur image directory'''
 imageDir = os.path.join(os.path.dirname(__file__), 'azure_dark', 'images')
 
 def osSystem(cmd):
@@ -38,7 +31,7 @@ def osSystem(cmd):
 	return rc
 
 def getImageNames():
-	'''seek for image name patter "$I(*)" in styleTclScript'''
+	'''seek for image name pattern "$I(*)" in styleTclScript'''
 	with open(styleTclScript) as f:
 		return set(re.findall('[$]I\(([^\)]*)\)', f.read()))
 
