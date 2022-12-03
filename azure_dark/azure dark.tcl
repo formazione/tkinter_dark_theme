@@ -51,7 +51,7 @@ namespace eval ttk::theme::azure {
             Button.button -children {
                 Button.padding -children {
                     Button.label -side left -expand true
-                } 
+                }
             }
         }
 
@@ -59,7 +59,7 @@ namespace eval ttk::theme::azure {
             Toolbutton.button -children {
                 Toolbutton.padding -children {
                     Toolbutton.label -side left -expand true
-                } 
+                }
             }
         }
 
@@ -67,7 +67,7 @@ namespace eval ttk::theme::azure {
             Accentbutton.button -children {
                 Accentbutton.padding -children {
                     Accentbutton.label -side left -expand true
-                } 
+                }
             }
         }
 
@@ -94,7 +94,7 @@ namespace eval ttk::theme::azure {
             Togglebutton.button -children {
                 Togglebutton.padding -children {
                     Togglebutton.label -side left -expand true
-                } 
+                }
             }
         }
 
@@ -186,8 +186,8 @@ namespace eval ttk::theme::azure {
             Treeitem.padding -sticky nswe -children {
                 Treeitem.indicator -side left -sticky {} Treeitem.image -side left -sticky {} -children {
                     Treeitem.text -side left -sticky {}
-                    }
                 }
+            }
         }
 
 
@@ -199,9 +199,8 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Button.button image \
             [list $I(button-basic) \
-                {disabled pressed} $I(button-disabled) \
-                {focus active} $I(button-accent-hover) \
                 disabled $I(button-disabled) \
+                {focus active} $I(button-accent-hover) \
                 pressed $I(button-basic) \
                 active $I(button-hover) \
                 focus $I(button-accent) \
@@ -225,8 +224,8 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Accentbutton.button image \
             [list $I(button-accent) \
-                {disabled pressed} $I(button-disabled) \
                 disabled $I(button-disabled) \
+                {pressed !active} $I(button-accent-hover) \
                 pressed $I(button-accent) \
                 active $I(button-accent-hover) \
             ] -border 4 -sticky ewns
@@ -244,7 +243,7 @@ namespace eval ttk::theme::azure {
                 {pressed selected} $I(checkbox-checked-active) \
                 {active selected} $I(checkbox-checked-hover) \
                 selected $I(checkbox-checked) \
-                {pressed !selected} $I(checkbox-unchecked-active) \
+                {pressed !selected} $I(checkbox-unchecked-hover) \
                 active $I(checkbox-unchecked-hover) \
             ] -width 26 -sticky w
 
@@ -265,12 +264,14 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Togglebutton.button image \
             [list $I(button-basic) \
-                {selected disabled} $I(button-basic) \
-                disabled $I(button-hover) \
+                {selected disabled} $I(button-disabled) \
+                disabled $I(button-basic) \
+                {selected hover} $I(button-accent-hover) \
+                hover $I(button-hover) \
                 {pressed selected} $I(button-basic) \
+                pressed $I(button-accent) \
                 {active selected} $I(button-accent) \
                 selected $I(button-accent) \
-                {pressed !selected} $I(button-accent) \
                 active $I(button-basic) \
             ] -border 4 -sticky ewns
 
@@ -279,12 +280,12 @@ namespace eval ttk::theme::azure {
 
         ttk::style element create Radiobutton.indicator image \
             [list $I(radio-unselected) \
+                pressed $I(scale-slider-hover) \
                 {selected disabled} $I(radio-selected-disabled) \
                 disabled $I(radio-unselected-disabled) \
                 {pressed selected} $I(radio-selected-active) \
                 {active selected} $I(radio-selected-hover) \
                 selected $I(radio-selected) \
-                {pressed !selected} $I(scale-slider-pressed) \
                 active $I(radio-unselected-hover) \
             ] -width 26 -sticky w
 
@@ -295,7 +296,7 @@ namespace eval ttk::theme::azure {
         ttk::style element create Horizontal.Scrollbar.thumb \
              image [list $I(scrollbar-slider-horizontal) \
                 disabled $I(scrollbar-trough-horizontal) \
-                pressed $I(scrollbar-slider-horizontal) \
+                pressed $I(scrollbar-slider-horizontal-hover) \
                 active $I(scrollbar-slider-horizontal-hover) \
             ] -sticky ew
 
@@ -305,7 +306,7 @@ namespace eval ttk::theme::azure {
         ttk::style element create Vertical.Scrollbar.thumb \
             image [list $I(scrollbar-slider-vertical) \
                 disabled  $I(scrollbar-trough-vertical) \
-                pressed $I(scrollbar-slider-vertical) \
+                pressed $I(scrollbar-slider-vertical-hover) \
                 active $I(scrollbar-slider-vertical-hover) \
             ] -sticky ns
 
@@ -317,7 +318,7 @@ namespace eval ttk::theme::azure {
         ttk::style element create Horizontal.Scale.slider \
             image [list $I(scale-slider) \
                 disabled $I(scale-slider-disabled) \
-                pressed $I(scale-slider-pressed) \
+                pressed $I(scale-slider-hover) \
                 active $I(scale-slider-hover) \
             ] -sticky {}
 
@@ -328,7 +329,7 @@ namespace eval ttk::theme::azure {
         ttk::style element create Vertical.Scale.slider \
             image [list $I(scale-slider) \
                 disabled $I(scale-slider-disabled) \
-                pressed $I(scale-slider-pressed) \
+                pressed $I(scale-slider-hover) \
                 active $I(scale-slider-hover) \
             ] -sticky {}
 
@@ -364,7 +365,7 @@ namespace eval ttk::theme::azure {
                 disabled $I(button-disabled) \
                 pressed  $I(button-basic) \
                 active   $I(button-hover) \
-            ] -border 4 -sticky news 
+            ] -border 4 -sticky news
 
         ttk::style element create Menubutton.indicator \
             image [list $I(arrow-down) \
@@ -382,8 +383,8 @@ namespace eval ttk::theme::azure {
                 disabled $I(button-disabled) \
                 pressed $I(button-basic) \
                 active $I(button-hover) \
-                
-            ] -border 5 -sticky news 
+
+            ] -border 5 -sticky news
 
         ttk::style element create OptionMenu.indicator \
             image [list $I(arrow-down) \
@@ -398,7 +399,7 @@ namespace eval ttk::theme::azure {
             {readonly hover} $colors(-selectbg) \
             {readonly focus} $colors(-selectbg) \
         ]
-            
+
         ttk::style map TCombobox -selectforeground [list \
             {!focus} $colors(-selectfg) \
             {readonly hover} $colors(-selectfg) \
@@ -447,7 +448,7 @@ namespace eval ttk::theme::azure {
                 pressed $I(arrow-down-active) \
                 disabled $I(arrow-down) \
           ] -border 4 -width 15 -sticky e
-        
+
         # Notebook
         ttk::style element create Notebook.client \
             image $I(notebook-client) -border 4
@@ -459,17 +460,11 @@ namespace eval ttk::theme::azure {
             ] -border 5 -padding {12 4}
 
         # Progressbar
-        ttk::style element create Horizontal.Progressbar.trough \
-            image $I(scrollbar-trough-horizontal) -border {} -sticky ew
+        ttk::style element create Horizontal.Progressbar.trough image $I(scrollbar-trough-horizontal) -border {} -sticky ew
+        ttk::style element create Horizontal.Progressbar.pbar   image $I(scrollbar-slider-horizontal) -border {} -sticky ew
 
-        ttk::style element create Horizontal.Progressbar.pbar \
-            image $I(scrollbar-slider-horizontal) -border {} -sticky ew
-
-        ttk::style element create Vertical.Progressbar.trough \
-            image $I(scrollbar-trough-vertical) -border {} -sticky ns
-
-        ttk::style element create Vertical.Progressbar.pbar \
-            image $I(scrollbar-slider-vertical) -border {} -sticky ns
+        ttk::style element create Vertical.Progressbar.trough image $I(scrollbar-trough-vertical) -border {} -sticky ns
+        ttk::style element create Vertical.Progressbar.pbar   image $I(scrollbar-slider-vertical) -border {} -sticky ns
 
         # Treeview
         ttk::style element create Treeview.field \
@@ -479,7 +474,7 @@ namespace eval ttk::theme::azure {
             image [list $I(tree-basic) \
                 active $I(tree-hover)
             ] -border 5 -padding 4 -sticky ewns
-        
+
         ttk::style element create Treeitem.indicator \
             image [list $I(arrow-right) \
                 user2 $I(empty) \
@@ -493,11 +488,11 @@ namespace eval ttk::theme::azure {
             -foreground [list selected $colors(-selectfg)]
 
         # Sashes
-        
+
         ttk::style configure TPanedwindow -width 1 -padding 0
         ttk::style map TPanedwindow -background \
             [list hover $colors(-bg)]
-        
+
         # Set colors for other widgets
         tk_setPalette background [ttk::style lookup . -background] \
             foreground [ttk::style lookup . -foreground] \
@@ -509,3 +504,4 @@ namespace eval ttk::theme::azure {
         option add *font [ttk::style lookup . -font]
     }
 }
+

@@ -1,7 +1,14 @@
+
+# coding: utf-8
+
+import azure_dark
+
 import tkinter as tk
 from tkinter import ttk
 
 root = tk.Tk()
+azure_dark.apply_theme(root)
+
 root.title('Azure')
 
 window_height = 530
@@ -15,39 +22,32 @@ y_cordinate = int((screen_height/2) - (window_height/2))
 
 root.geometry("{}x{}+{}+{}".format(window_width, window_height, x_cordinate, y_cordinate))
 
-style = ttk.Style(root)
-root.tk.call('source', 'azure.tcl')
-style.theme_use('azure')
 
 options = ['', 'OptionMenu', 'Value 1', 'Value 2']
-a = tk.IntVar()
-b = tk.IntVar()
-b.set(1)
-c = tk.IntVar()
-d = tk.IntVar()
-d.set(2)
-e = tk.StringVar()
-e.set(options[1])
-f = tk.IntVar()
-g = tk.IntVar()
-g.set(75)
-h = tk.IntVar()
+a = tk.BooleanVar()
+b = tk.BooleanVar(value=True)
+c = tk.BooleanVar()
+d = tk.IntVar(value=2)
+e = tk.StringVar(value=options[1])
+f = tk.BooleanVar()
+g = tk.IntVar(value=75)
+h = tk.BooleanVar(value=1)
 
 frame1 = ttk.LabelFrame(root, text='Checkbuttons', width=210, height=200)
 frame1.place(x=20, y=12)
 
-frame2 = ttk.LabelFrame(root, text='Radiobuttons', width=210, height=160)
-frame2.place(x=20, y=252)
-
-check1 = ttk.Checkbutton(frame1, text='Unchecked', variable=a, offvalue=0, onvalue=1)
+check1 = ttk.Checkbutton(frame1, text='Unchecked', variable=a)
 check1.place(x=20, y=20)
-check2 = ttk.Checkbutton(frame1, text='Checked', variable=b, offvalue=0, onvalue=1)
+check2 = ttk.Checkbutton(frame1, text='Checked', variable=b)
 check2.place(x=20, y=60)
-check3 = ttk.Checkbutton(frame1, text='Third state', variable=c, offvalue=0, onvalue=1)
+check3 = ttk.Checkbutton(frame1, text='Third state', variable=c)
 check3.state(['alternate'])
 check3.place(x=20, y=100)
 check4 = ttk.Checkbutton(frame1, text='Disabled', state='disabled')
 check4.place(x=20, y=140)
+
+frame2 = ttk.LabelFrame(root, text='Radiobuttons', width=210, height=160)
+frame2.place(x=20, y=252)
 
 radio1 = ttk.Radiobutton(frame2, text='Deselected', variable=d, value=1)
 radio1.place(x=20, y=20)
@@ -85,8 +85,7 @@ menubtn.place(x=250, y=220)
 menubtn = ttk.OptionMenu(root, e, *options)
 menubtn.place(x=250, y=270)
 
-def callback():
-    print('Button callback')
+def callback(): print('Button callback')
 
 button = ttk.Button(root, text='Button', command=callback)
 button.place(x=250, y=320)
@@ -94,24 +93,21 @@ button.place(x=250, y=320)
 accentbutton = ttk.Button(root, text='Accent button', style='Accentbutton', command=callback)
 accentbutton.place(x=250, y=370)
 
-toggle = ttk.Checkbutton(root, text='Toggle button', style='Togglebutton', variable=f, offvalue=0, onvalue=1)
+toggle = ttk.Checkbutton(root, text='Toggle button', style='Togglebutton', variable=f)
 toggle.place(x=250, y=420)
 
-def scale(i):
-    g.set(int(scale.get()))
-
-scale = ttk.Scale(root, from_=100, to=0, variable=g, command=scale)
+scale = ttk.Scale(root, to=100, variable=g)
 scale.place(x=80, y=430)
 
-progress = ttk.Progressbar(root, value=0, variable=g, mode='determinate')
+g2 = tk.IntVar()
+g.trace_add([ 'write', 'unset', ], lambda *args: g2.set(100 - g.get()))
+g.set(g.get()) # init g2
+
+progress = ttk.Progressbar(root, variable=g2, mode='determinate')
 progress.place(x=80, y=480)
 
-switch = ttk.Checkbutton(root, text='Toggle switch', style='Switch', variable=h, offvalue=0, onvalue=1)
+switch = ttk.Checkbutton(root, text='Toggle switch', style='Switch', variable=h)
 switch.place(x=250, y=470)
-switch.invoke()
-
-size = ttk.Sizegrip(root)
-size.place(x=780, y=510)
 
 sep1 = ttk.Separator()
 sep1.place(x=20, y=235, width=210)
@@ -124,6 +120,10 @@ notebook.add(notebookTab2, text='Tab 2')
 notebookTab3 = ttk.Frame(notebook, width=335, height=150)
 notebook.add(notebookTab3, text='Tab 3')
 notebook.place(x=420, y=330)
+
+#inside tab1
+ttk.Scale(notebookTab1, from_=100, to=0, variable=g, orient=tk.VERTICAL).pack(side=tk.LEFT)
+ttk.Progressbar(notebookTab1, variable=g, mode='determinate', orient=tk.VERTICAL).pack(side=tk.LEFT)
 
 treeFrame = ttk.Frame(root)
 treeFrame.place(x=420, y=20)
@@ -177,4 +177,10 @@ treeview.insert(parent=21, index='end', iid=23, text="Child", values=("Subitem 4
 treeview.insert(parent=21, index='end', iid=24, text="Child", values=("Subitem 4.2.3", "Value 4.2.3"))
 treeview.insert(parent=19, index='end', iid=25, text="Child", values=("Subitem 4.3", "Value 4.3"))
 
+#last widget is over others
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
+ttk.Sizegrip(root).grid(sticky=tk.SE)
+
 root.mainloop()
+
