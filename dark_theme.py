@@ -18,7 +18,7 @@ def main_window():
     root = tk.Tk()
     root.title("My App")
     root.resizable(False, False)
-    img = tk.PhotoImage(file="001.png")
+    img = tk.PhotoImage(file="001.PNG")
 
     style = darkstyle(root)
 

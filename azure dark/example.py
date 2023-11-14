@@ -16,7 +16,7 @@ y_cordinate = int((screen_height/2) - (window_height/2))
 root.geometry("{}x{}+{}+{}".format(window_width, window_height, x_cordinate, y_cordinate))
 
 style = ttk.Style(root)
-root.tk.call('source', 'azure.tcl')
+root.tk.call('source', 'azure dark.tcl')
 style.theme_use('azure')
 
 options = ['', 'OptionMenu', 'Value 1', 'Value 2']
@@ -57,20 +57,20 @@ radio3 = ttk.Radiobutton(frame2, text='Disabled', state='disabled')
 radio3.place(x=20, y=100)
 
 entry = ttk.Entry(root)
-entry.place(x=250, y=20)
+entry.place(x=250, y=20, width=150)
 entry.insert(0, 'Entry')
 
 spin = ttk.Spinbox(root, from_=0, to=100, increment=0.1)
-spin.place(x=250, y=70)
+spin.place(x=250, y=70, width=150)
 spin.insert(0, 'Spinbox')
 
 combo1 = ttk.Combobox(root, value=['Combobox', 'Editable item 1', 'Editable item 2'])
 combo1.current(0)
-combo1.place(x=250, y=120)
+combo1.place(x=250, y=120, width=150)
 
 combo2 = ttk.Combobox(root, state='readonly', value=['Readonly combobox', 'Item 1', 'Item 2'])
 combo2.current(0)
-combo2.place(x=250, y=170)
+combo2.place(x=250, y=170, width=150)
 
 menu = tk.Menu(root, tearoff=0)
 menu.add_command(label='Menu item 1')
